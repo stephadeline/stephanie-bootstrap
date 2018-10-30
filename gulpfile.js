@@ -6,7 +6,7 @@ var gutil       = require('gulp-util');
 
 // Compile sass into CSS and put into docs/css folder
 gulp.task('sass', function() {
-    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
+    return gulp.src(['src/scss/*.scss'])
         .pipe(sass())
         .on('error', gutil.log)
         .pipe(gulp.dest("docs/css"))
